@@ -1,0 +1,37 @@
+.counter-container {
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+}
+.plus-minus-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.plus-minut-btn {
+  height: 40px;
+  width: 40px;
+}
+.result {
+  color: red;
+}
+.input-value {
+  width: 80px;
+}
+.add-btn {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+.add-btn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+  color: red;
+}
