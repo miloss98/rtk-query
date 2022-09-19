@@ -1,4 +1,5 @@
 import { useFetchPeopleQuery } from "./features/faker-api/fakerApiSlice";
+import Counter from "./features/counter/Counter";
 import "./app.css";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <div className="wrapper">
       <header>RTK Query </header>
       <section className="content">
-        <section className="cards-container">
+        {/* <section className="cards-container">
           {data?.data?.map((person) => {
             return (
               <article key={person?.id} className="single-card">
@@ -42,7 +43,8 @@ function App() {
               </article>
             );
           })}
-        </section>
+        </section> */}
+        <Counter />
       </section>
     </div>
   );
