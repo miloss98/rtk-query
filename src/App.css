@@ -12,10 +12,18 @@ header {
 }
 .content {
   height: calc(100vh - 80px);
-  background-color: lightgray;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 2rem;
+}
+.cards-container {
+  background-color: lightgray;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+ul {
+  padding: 30px;
 }

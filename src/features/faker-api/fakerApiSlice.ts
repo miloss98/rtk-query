@@ -9,14 +9,12 @@ export interface Person {
       email: string;
       phone: string;
       birthday: string;
-      gender: string;
       address: {
         street: string;
         city: string;
         country: string;
       };
       website: string;
-      image: string;
     }
   ];
 }
