@@ -6,6 +6,7 @@ import {
   incrementByAmount,
   decrementByAmount,
   incrementByCustom,
+  decrementByCustom,
   reset,
   count,
 } from "./counterSlice";
@@ -31,6 +32,7 @@ const Counter = () => {
         alignItems: "center",
       }}
     >
+      <p> {countValue}</p>
       <section
         style={{
           width: "150px",
@@ -39,18 +41,20 @@ const Counter = () => {
         }}
       >
         <button onClick={() => dispatch(decrement())}> - </button>
-        <p> {countValue}</p>
         <button onClick={() => dispatch(increment())}> + </button>
       </section>
       <section>
-        <button onClick={() => dispatch(incrementByAmount(2))}>
-          increment by 2
-        </button>
-        <button onClick={() => dispatch(decrementByAmount(4))}>
-          decrement by 4
-        </button>
+        <button onClick={() => dispatch(incrementByAmount(2))}>+ 2</button>
+        <button onClick={() => dispatch(decrementByAmount(4))}>- 4</button>
       </section>
-      <section>
+      <section
+        style={{
+          height: "200px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <input
           onChange={(e) => handleInput(e)}
           type="text"
@@ -60,7 +64,12 @@ const Counter = () => {
         <button
           onClick={() => dispatch(incrementByCustom(Number(customAmount)))}
         >
-          add
+          custom +
+        </button>
+        <button
+          onClick={() => dispatch(decrementByCustom(Number(customAmount)))}
+        >
+          custom -
         </button>
       </section>
       <button onClick={() => dispatch(reset())}> Reset </button>
